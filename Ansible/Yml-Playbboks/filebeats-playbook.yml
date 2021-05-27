@@ -5,8 +5,7 @@ become: true
 tasks:
 # Use command module
 - name: Download metricbeat
-command: curl -L -O
-https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb
+command: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb
 # Use command module
 - name: install metricbeat
 command: dpkg -i metricbeat-7.6.1-amd64.deb
