@@ -86,7 +86,8 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
  - Download the Docker Elk Container - name: download and launch a docker elk container
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
- 
+ ![image](https://user-images.githubusercontent.com/74883969/120400401-ce695c00-c30b-11eb-8e43-9507d0ecdeaf.png)
+
 
 
 ### Target Machines & Beats
@@ -96,8 +97,8 @@ This ELK server is configured to monitor the following machines:
 
 
 We have installed the following Beats on these machines:
-•	- Filebeat
-•	-Metricbeat
+- Filebeat
+- Metricbeat
 
 
 These Beats allow us to collect the following information from each machine:
@@ -114,16 +115,16 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to Django-vm1(PublicIP:5601/app/kibana) to check that the installation worked as expected.
 
 
-##Which file is the playbook? Where do you copy it?_
+### Which file is the playbook? Where do you copy it?_
 - Which file do you update to make Ansible run the playbook on a specific machine?
-•	 -Answer: /etc/ansible/host
+	 - Answer: /etc/ansible/host
  
--How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+- How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 
--Answer: Update the Host file, to specify you add the private IP under elk and not web servers in the hosts file.
+   - Answer: Update the Host file, to specify you add the private IP under elk and not web servers in the hosts file.
 
-- _Which URL do you navigate to in order to check that the ELK server is running?
--Answer: http://(PublicIP:5601/app/kibana)
+- Which URL do you navigate to in order to check that the ELK server is running?
+   - Answer: http://(PublicIP:5601/app/kibana)
 
 
 
