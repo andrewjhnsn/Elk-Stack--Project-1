@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-  -  [my-playbook](https://github.com/andrewjhnsn/Elk-Stack-Project-1/blob/main/Ansible/yml-Playbooks/my-playbook.yml)- 
+  -  [my-playbook.yml](https://github.com/andrewjhnsn/Elk-Stack-Project-1/blob/main/Ansible/yml-Playbooks/my-playbook.yml) 
 - [install-elk-playbook.yml](https://github.com/andrewjhnsn/Elk-Stack-Project-1/blob/main/Ansible/yml-Playbooks/install-elk-playbook.yml)
 
 -	[filebeats-playbook.yml](https://github.com/andrewjhnsn/Elk-Stack-Project-1/blob/main/Ansible/yml-Playbooks/filebeats-playbook.yml)
@@ -83,7 +83,8 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 - Install Docker.io and pip3
      
- - Download the Docker Elk Container - name: download and launch a docker elk container
+ - Download the Docker Elk Container 
+ - Enable docker to start on reboot
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
  ![image](https://user-images.githubusercontent.com/74883969/120400401-ce695c00-c30b-11eb-8e43-9507d0ecdeaf.png)
@@ -115,16 +116,33 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to Django-vm1(PublicIP:5601/app/kibana) to check that the installation worked as expected.
 
 
-### Which file is the playbook? Where do you copy it?_
-- Which file do you update to make Ansible run the playbook on a specific machine?
-	 - Answer: /etc/ansible/host
+#### Which file is the playbook? Where do you copy it?
+- Answer: The Playbook is a .yml file. You copy the file to the source and destination that you want the file to be located. 
+
+#### Which file do you update to make Ansible run the playbook on a specific machine?
+ - Answer: /etc/ansible/host
  
-- How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+#### How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 
-   - Answer: Update the Host file, to specify you add the private IP under elk and not web servers in the hosts file.
+ - Answer: Update the Host file, to specify you add the private IP under elk and not web servers in the hosts file.
 
-- Which URL do you navigate to in order to check that the ELK server is running?
-   - Answer: http://(PublicIP:5601/app/kibana)
+#### Which URL do you navigate to in order to check that the ELK server is running?
+  - Answer: http://(PublicIP:5601/app/kibana)
 
+
+## Additional Command that were used
+| Commands                                        |                   Purpose                  |
+|-------------------------------------------------|:------------------------------------------:|
+| sudo apt get-update                             | this will update all packages              |
+| sudo apt install docker.io                      |         install docker application         |
+| sudo service docker start                       |        start the docker application        |
+| systemctl status docker                         |      statis of the docker application      |
+| sudo docker pull cyberxsecurity/ansible         |          download the docker file          |
+| sudo docker run -ti cyberxsecurity/ansible bash |        run and create a docker image       |
+| sudo docker start                               | starts the image specified                 |
+| sudo docker ps -a                               | list all active/inactive containers        |
+| sudo docker attach                              | effectively sshing into the ansible        |
+| ssh-keygen                                      | create a ssh key                           |
+| ansible-m ping all                              | check the connection of anisble containers |
 
 
