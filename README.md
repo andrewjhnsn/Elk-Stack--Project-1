@@ -1,6 +1,7 @@
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
+![image](https://user-images.githubusercontent.com/74883969/120398363-125a6200-c308-11eb-8d19-83a7b4e13206.png)
 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Playbook file may be used to install only certain pieces of it, such as Filebeat.
@@ -14,7 +15,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 -	[Filebeat-config.yml](https://github.com/andrewjhnsn/Elk-Stack-Project-1/blob/main/Ansible/yml-Playbooks/Filebeat-config.yml)
 -	[Metricbeats-config.yml](https://github.com/andrewjhnsn/Elk-Stack-Project-1/blob/main/Ansible/yml-Playbooks/Metricbeat.config.yml)
--	[HostsFile](https://github.com/andrewjhnsn/Elk-Stack-Project-1/blob/main/Ansible/yml-Playbooks/Hosts%20File)
+-	[Hosts-File](https://github.com/andrewjhnsn/Elk-Stack-Project-1/blob/main/Ansible/yml-Playbooks/Hosts%20File)
 
 
 This document contains the following details:
