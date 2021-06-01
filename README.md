@@ -1,14 +1,15 @@
 # Elk-Stack-Project-1
 # Automated ELK Stack Deployment
 The files in this repository were used to configure the network depicted below.
+![image](https://user-images.githubusercontent.com/74883969/120262831-80e7e300-c268-11eb-9ec4-fb520cb1fcc6.png)
 
 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Playbook File may be used to install only certain pieces of it, such as Filebeat.
-Filebeats-playbook.yml
-Install-Elk-Playbook.yml
+
+[Install-Elk-Playbook.yml}
 Metricbeat-Playbook.yml
- My-Playbook.yml
+My-Playbook.yml
 Hosts File
 Metricbeat-config.yml
 Filebeat-config.yml
