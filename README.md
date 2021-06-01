@@ -33,7 +33,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 
--Jump-Box-Provisioner allows easy access and management of multiple macjones. It also allows for multiple machines to be added when necessary without recreating a whole new network structure. It provides an extra layer of protection to your system.
+Jump-Box-Provisioner allows easy access and management of multiple macjones. It also allows for multiple machines to be added when necessary without recreating a whole new network structure. It provides an extra layer of protection to your system.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the event logs and system system metrics.
 - Filebeat- watches for log files/locations and collects log events.
@@ -76,64 +76,18 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 - The main advantage of automating the configuration of the Django-vm1(Elk Server) helped the process of being able to create and install multiple servers. Which makes it easy to deploy them without having to physically touch each server.
 
--[Install-ElK-Playbook](https://github.com/andrewjhnsn/Elk-Stack-Project-1/blob/main/Ansible/yml-Playbooks/install-elk-playbook.yml)implements the following tasks:
+[Install-ElK-Playbook](https://github.com/andrewjhnsn/Elk-Stack-Project-1/blob/main/Ansible/yml-Playbooks/install-elk-playbook.yml) implements the following tasks:
 - Download and Configure elk docker container 
-- ---
-     - name: Configure Elk VM with Docker
-       hosts: elk
-       remote_user: redadmin
-       become: true
-       tasks:
 
 - Increases virtual memory
 
-  - name: Increase virtual memory
-     command: sysctl -w vm.max_map_count=262144
-
-   - name: Use more memory
-     sysctl:
-       name: vm.max_map_count
-       value: '262144'
-       state: present
-       reload: yes
-
--Install Docker.io and pip3
-- name: Install docker.io
-     apt:
-       update_cache: yes
-       force_apt_get: yes
-       name: docker.io
-       state: present
-       
-   - name: Install python3-pip
-     apt:
-       force_apt_get: yes
-       name: python3-pip
-       state: present
-
--Download the Docker Elk Container - name: download and launch a docker elk container
-     docker_container:
-       name: elk
-       image: sebp/elk:761
-       state: started
-       restart_policy: always
-       published_ports:
-         -  5601:5601
-         -  9200:9200
-         -  5044:5044
-
--Make sure Docker is enable to start on reboot
-- name: Enable service docker on boot
-     systemd:
-       name: docker
-       enabled: yes
-
-
-
+- Install Docker.io and pip3
+     
+ - Download the Docker Elk Container - name: download and launch a docker elk container
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
  
-!
+
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
