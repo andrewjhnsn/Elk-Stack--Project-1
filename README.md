@@ -13,9 +13,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 -	[metricbeats-playbook.yml](https://github.com/andrewjhnsn/Elk-Stack-Project-1/blob/main/Ansible/yml-Playbooks/metricbeats.playbook.yml)
 
--	[Filebeat-config.yml](https://github.com/andrewjhnsn/Elk-Stack-Project-1/blob/main/Ansible/yml-Playbooks/Filebeat-config.yml)
--	[Metricbeats-config.yml](https://github.com/andrewjhnsn/Elk-Stack-Project-1/blob/main/Ansible/yml-Playbooks/Metricbeat.config.yml)
--	[Hosts-File](https://github.com/andrewjhnsn/Elk-Stack-Project-1/blob/main/Ansible/yml-Playbooks/Hosts%20File)
+
 
 
 This document contains the following details:
