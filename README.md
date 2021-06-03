@@ -103,7 +103,7 @@ We have installed the following Beats on these machines:
 
 
 These Beats allow us to collect the following information from each machine:
--  Filebeat watches for log files/locations and collects log events. Winlogbeat, for example, ships Windows event logs
+-  Filebeat watches for log files/locations and collects log events. for example, can monitor Windows event logs
 - Metricbeat helps you monitor your servers by collecting metrics from the system and services running on the server. For example, you can use Metricbeat to monitor and analyze system CPU, memory and load.	
 
 ### Using the Playbook
