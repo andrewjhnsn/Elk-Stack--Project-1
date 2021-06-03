@@ -65,10 +65,10 @@ Machines within the network can only be accessed by Jump-Box-Provisioner.
 A summary of the access policies in place can be found in the table below.
 | Name                    | Publicly Accessible | Allowed IP Addresses              |
 |-------------------------|---------------------|-----------------------------------|
-| Jump Box                | No                  | Workstation Public IP on SSH 22   |
+| Jump Box                | Yes                  | Workstation Public IP on SSH 22   |
 | Web-1                   | No                  | 10.0.0.5 on SSH 22                |
 | Web-2                   | No                  | 10.0.0.6 on SSH 22                |
-| Load Balancer           | No                  | Workstation Public IP on HTTP 80  |
+| Load Balancer           | Yes                 | Workstation Public IP on HTTP 80  |
 | Django-vm1 (Elk Server) | No                  | Workstation Public IP on TCP 5601 |
 
 ### Elk Configuration
